@@ -6,17 +6,20 @@
         <style>
             body{
                 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                background-color: rgb(134, 101, 101);
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 100vh;
                 background-image: url(images/laptop.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
             }
             form{
-                background-color: rgb(176, 95, 95);
-                padding: 20px 30px;
-                border-radius: 10px;
+                background-color: rgb(179, 126, 181);
+                padding: 25px 30px;
+                border-radius: 15px;
                 box-shadow: 0 0 10px rgb(214, 207, 207);
             }
             label{
@@ -24,8 +27,8 @@
                 margin-top: 15px;
                 font-weight: bold;
             }
-            input[type='name'],textarea
-            input[type="text"], input[type="email"], textarea{
+            
+            input[type="text"],input[type='name'], input[type="email"], textarea{
                 width: 100%;
                 padding: 8px;
                 margin-top: 5px;
@@ -52,6 +55,9 @@
             input[type="submit"]:hover{
                 background-color: rgb(21, 228, 73);
             }
+            .required{
+                color: red;
+            }
             
 
         </style>
@@ -59,17 +65,18 @@
     <body>
 
         <form>
-            <h1 > Login Form</h1>
-            <label for="name">Name</label>
-            <input type="name" id="name" placeholder="Enter your name">
+            <h1>Contact Form</h1>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Your Email">
+            <label for="name">Name<span class="required">*</span></label>
+            <input type="name" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email<span class="required">*</span></label>
+            <input type="email" id="email" placeholder="Your Email" required>
 
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Your Message"></textarea>
+            <textarea id="message" name="message" placeholder="Your Message" ></textarea>
 
-            <input type="submit" value="Submit">
+            <input type="submit"  value="Submit">
         </form>
     </body>
-</html>
+</html> 

@@ -51,7 +51,24 @@
                 border-radius: 10px;
                 cursor: pointer;
                 font-size: 17px;
-            }  
+            }
+            input[type='reset']{
+                margin-top: 12px;
+                width: 100%;
+                padding:9px;
+                background-color: rgb(194, 155, 155);
+                color: black;
+                border: none;
+                border-radius: 10px;
+                cursor:pointer;
+                font-size:medium;
+                
+            }
+            input[type='reset']:hover{ 
+                background-color: black;
+                color:white;
+            }
+
             input[type="submit"]:hover{
                 background-color: rgb(21, 228, 73);
             }
@@ -77,6 +94,7 @@
             <textarea id="message" name="message" placeholder="Your Message" ></textarea>
 
             <input type="submit"  value="Submit">
+            <input type="reset" value="Reset">
         </form>
     </body>
 </html> 
